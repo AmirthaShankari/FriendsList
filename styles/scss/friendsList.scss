@@ -1,0 +1,243 @@
+//BEGIN :: Import of partials and commons
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'commons';
+//END :: Import of Partials and commons
+
+//BEGIN :: friend list main wrapper styling
+.friendlist-main-wrapper{
+    .friends-list-container{
+        width : 70%;
+        min-height : 830px;
+        padding : 100px 50px 50px;
+        margin : 0 auto;
+        background : $colorWhite; 
+        //BEGIN :: friend list search and sort styling
+        .friends-search-sort-container{
+            display : flex;
+            flex-wrap : wrap;
+            justify-content : space-between; 
+            margin-bottom : 50px;
+            .search-container{
+                width : 600px;
+            }
+            .autocomplete {
+                position: relative;
+            }
+            .autocomplete-items{
+                position : absolute;
+                top : 100%;
+                left : 3%;
+                width : 94%;
+                border : 1px solid $colorLightGrey;
+                border-bottom : none;
+                border-top : none;
+                z-index : 10;
+            }
+            .autocomplete-item-height{
+                height : 300px;
+                overflow-y : scroll;
+            }
+            .autocomplete-items div{
+                padding : 10px;
+                cursor : pointer;
+                background-color : $colorWhite; 
+                border-bottom : 1px solid $colorLightGrey; 
+            }
+            .autocomplete-active, .autocomplete-items div:hover{
+                background : $colorLightPurple !important;
+                color : $colorWhite; 
+            }
+            .sort-filter-container{
+                font-size : 16px;
+                padding : 10px 0;
+                color : $colorDarkGrey;
+            }
+            input[type="text"] {
+                width : 100%;
+                border: 1px solid $colorDarkGrey;
+                border-radius : 30px; 
+                padding: 10px 30px;
+                font-size: 16px;
+            }
+            .filter-container, .sort-container{
+                display : inline-block;
+            }
+            .sort-container{
+                padding-right : 20px;
+            }
+            .filter-container{
+                select{
+                    width : 150px;
+                    height : 30px;
+                    font-size : 14px;
+                }
+            }
+        }
+        //END :: friend list search and sort styling
+
+        //BEGIN :: alphabetical search
+        #alphabetical-search{
+            display : flex;
+            justify-content : flex-end; 
+            padding : 20px 0;
+            div{
+                width : 30px;
+                border-left : 1px solid $colorLightGrey;
+                text-align : center; 
+                cursor : pointer;
+            }
+            .alphabetical-filter-active{
+                color : $colorWhite;
+                background-color : $colorLightPurple; 
+            }
+        }
+        //END :: alphabetical search
+
+        //BEGIN :: friendlist detail styling
+        .friend-list-detail{
+            display: flex;
+            flex-wrap: wrap;
+            margin: -20px 0 0 -20px;
+        }
+        //BEGIN :: friendlist detail styling
+        
+        //BEGIN :: friend detail styling
+        .friend-detail{
+            width : calc(100% * (1/2) - 20px);
+            display : inline-flex;
+            flex-wrap : wrap;
+            align-items : center;
+            justify-content : space-evenly;
+            padding : 20px;
+            margin : 20px 0 0 20px;
+            cursor : pointer;
+            background : $colorLightGrey; 
+            .image-container{
+                width : 20%;
+                img{
+                    width : 100%;
+                    border-radius : 50%;
+                    vertical-align : middle;  
+                }
+            }
+            .detail-container{
+                width : 70%;
+                padding-left : 20px;
+                .name-favourite-container{
+                    display : flex;
+                    justify-content : space-between; 
+                    align-items : center; 
+                    font-size : 18px;
+                    .favourite{
+                        padding-left : 10px;
+                        color : $colorLightPurple;
+                    }
+                }
+                .email-gender-wrapper{
+                    font-size : 16px;
+                    padding-top : 6px;  
+                    div{
+                        display : inline-block;
+                    }
+                    div:last-child{
+                        padding-left : 5px;
+                    }
+                    .gender{
+                        font-size : 18px;
+                    }
+                    .email{
+                        word-break : break-all; 
+                    }
+                    .email-link{
+                        text-decoration : none;
+                        color : $colorDarkGrey; 
+                    }
+                }
+            }
+        }
+        //END :: friend detail styling
+    }
+    //END :: friend list main wrapper styling
+
+    //BEGIN :: Header styling
+    header{
+        position : fixed;
+        top : 0;
+        left : 0;
+        width : 100%;
+        padding : 15px 30px;
+        font-size : 20px;
+        font-weight : 600; 
+        z-index : 100;
+        @include setTheme($colorPurple, $colorWhite);
+     }
+     //END :: Header styling
+
+    //BEGIN :: friend name styling
+    .name{
+        width : 70%;
+        color : $colorPurple;
+        font-weight : 600;
+    }
+    //END :: friend name styling
+
+    //BEGIN :: pagination styling
+    .pagination-bar-container{
+        display : flex;
+        justify-content : space-between;  
+        margin : 30px 0;
+        .pages{
+            display : flex;
+        }
+        .result-detail{
+            padding : 10px 0;
+        }
+        .page-detail{
+            padding : 10px;
+            width : 50px;
+            border : 1px solid $colorDarkGrey;
+            border-left : 0; 
+            text-align : center;
+        }
+        .page-detail:first-child{
+            border-left : 1px solid $colorDarkGrey;
+        }
+
+        .page-detail:hover{
+            background : $colorLightPurple;
+            color : $colorWhite; 
+        }
+        .page-detail-active{
+            background : $colorPurple;
+            color : $colorWhite; 
+        }
+    }
+    //END :: pagination styling
+
+    //BEGIN :: friend description pop up styling
+    .friend-description {
+        display : none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 500px;
+        min-height: 150px;
+        height : auto;
+        padding : 20px;
+        background : $colorWhite;
+        i{
+            position : absolute;
+            top : 20px;
+            right : 20px;
+            display : block;
+        }
+        div:last-child{
+            margin : 20px 0;
+        }
+    }
+    //END :: friend description pop up styling
+}
+//END :: friend list main wrapper styling

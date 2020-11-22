@@ -1,0 +1,12 @@
+//BEGIN :: setTheme declaration
+@mixin setTheme($backgroundColor, $color){
+    background-color : $backgroundColor;
+    color : $color; 
+}
+//END :: setTheme declaration
+//BEGIN :: setCentre declaration
+@mixin setCentre($width){
+    width : $width;
+    margin : 0px auto;
+}
+//END :: setCentre declaration

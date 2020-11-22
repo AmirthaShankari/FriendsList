@@ -1,0 +1,77 @@
+//BEGIN :: Setting the fontstack
+*{
+    font-family : $fontStack;
+}
+//END :: Setting the fontstack
+
+body{
+    @include setTheme($colorLightGrey , $colorDarkGrey);
+}
+
+//BEGIN :: float styling
+.float-left{
+    float : left;
+}
+.float-right{
+    float : right;
+}
+.clear-fix{
+    clear : both;
+}
+//END :: float styling
+
+//
+.message{
+    min-height : 450px;
+    margin : 100px auto;
+    font-size : 24px;
+    color : $colorLightPurple; 
+}
+
+//BEGIN :: Display property
+.display-none{
+    display : none;
+}
+
+.display-block{
+    display : block;
+}
+//END :: Display property
+
+//BEGIN :: Loader styles 
+.loader-wrapper{
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    margin : 0 auto;
+    .loader {
+        border : 16px solid $colorLightGrey; 
+        border-top : 16px solid $colorLightPurple; 
+        border-radius : 50%;
+        width : 120px;
+        height : 120px;
+        animation : spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform : rotate(0deg); }
+        100% { transform : rotate(360deg); }
+    }
+}
+//END :: Loader styles 
+
+//BEGIN :: popup overlay
+.pop-up-wrapper{
+    display : none; 
+    position : fixed;
+    left : 0;
+    top : 0;
+    width : 100%; 
+    height : 100%; 
+    z-index : 1; 
+    padding-top : 100px; 
+    overflow : auto; 
+    background-color : $colorBlackWithOpacity; /* Black w/ opacity */
+}
+//END :: popup overlay

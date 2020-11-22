@@ -1,0 +1,13 @@
+//BEGIN :: Reset of default browser styles
+*{
+
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+
+}
+input:focus, select:focus, button:focus{
+    outline : none;
+}
+//END :: Reset of default browser styles

@@ -1,0 +1,235 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box; }
+
+input:focus, select:focus, button:focus {
+  outline: none; }
+
+* {
+  font-family: "Open Sans"; }
+
+body {
+  background-color: #ECECEC;
+  color: #686868; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.clear-fix {
+  clear: both; }
+
+.message {
+  min-height: 450px;
+  margin: 100px auto;
+  font-size: 24px;
+  color: #9979A7; }
+
+.display-none {
+  display: none; }
+
+.display-block {
+  display: block; }
+
+.loader-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto; }
+  .loader-wrapper .loader {
+    border: 16px solid #ECECEC;
+    border-top: 16px solid #9979A7;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite; }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.pop-up-wrapper {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding-top: 100px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black w/ opacity */ }
+
+.friendlist-main-wrapper .friends-list-container {
+  width: 70%;
+  min-height: 830px;
+  padding: 100px 50px 50px;
+  margin: 0 auto;
+  background: #ffffff; }
+  .friendlist-main-wrapper .friends-list-container .friends-search-sort-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .search-container {
+      width: 600px; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .autocomplete {
+      position: relative; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .autocomplete-items {
+      position: absolute;
+      top: 100%;
+      left: 3%;
+      width: 94%;
+      border: 1px solid #ECECEC;
+      border-bottom: none;
+      border-top: none;
+      z-index: 10; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .autocomplete-item-height {
+      height: 300px;
+      overflow-y: scroll; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .autocomplete-items div {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ECECEC; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .autocomplete-active, .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .autocomplete-items div:hover {
+      background: #9979A7 !important;
+      color: #ffffff; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .sort-filter-container {
+      font-size: 16px;
+      padding: 10px 0;
+      color: #686868; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container input[type="text"] {
+      width: 100%;
+      border: 1px solid #686868;
+      border-radius: 30px;
+      padding: 10px 30px;
+      font-size: 16px; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .filter-container, .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .sort-container {
+      display: inline-block; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .sort-container {
+      padding-right: 20px; }
+    .friendlist-main-wrapper .friends-list-container .friends-search-sort-container .filter-container select {
+      width: 150px;
+      height: 30px;
+      font-size: 14px; }
+  .friendlist-main-wrapper .friends-list-container #alphabetical-search {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0; }
+    .friendlist-main-wrapper .friends-list-container #alphabetical-search div {
+      width: 30px;
+      border-left: 1px solid #ECECEC;
+      text-align: center;
+      cursor: pointer; }
+    .friendlist-main-wrapper .friends-list-container #alphabetical-search .alphabetical-filter-active {
+      color: #ffffff;
+      background-color: #9979A7; }
+  .friendlist-main-wrapper .friends-list-container .friend-list-detail {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px 0 0 -20px; }
+  .friendlist-main-wrapper .friends-list-container .friend-detail {
+    width: calc(100% * (1/2) - 20px);
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 20px 0 0 20px;
+    cursor: pointer;
+    background: #ECECEC; }
+    .friendlist-main-wrapper .friends-list-container .friend-detail .image-container {
+      width: 20%; }
+      .friendlist-main-wrapper .friends-list-container .friend-detail .image-container img {
+        width: 100%;
+        border-radius: 50%;
+        vertical-align: middle; }
+    .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container {
+      width: 70%;
+      padding-left: 20px; }
+      .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .name-favourite-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px; }
+        .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .name-favourite-container .favourite {
+          padding-left: 10px;
+          color: #9979A7; }
+      .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .email-gender-wrapper {
+        font-size: 16px;
+        padding-top: 6px; }
+        .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .email-gender-wrapper div {
+          display: inline-block; }
+        .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .email-gender-wrapper div:last-child {
+          padding-left: 5px; }
+        .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .email-gender-wrapper .gender {
+          font-size: 18px; }
+        .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .email-gender-wrapper .email {
+          word-break: break-all; }
+        .friendlist-main-wrapper .friends-list-container .friend-detail .detail-container .email-gender-wrapper .email-link {
+          text-decoration: none;
+          color: #686868; }
+.friendlist-main-wrapper header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 100;
+  background-color: #41045A;
+  color: #ffffff; }
+.friendlist-main-wrapper .name {
+  width: 70%;
+  color: #41045A;
+  font-weight: 600; }
+.friendlist-main-wrapper .pagination-bar-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0; }
+  .friendlist-main-wrapper .pagination-bar-container .pages {
+    display: flex; }
+  .friendlist-main-wrapper .pagination-bar-container .result-detail {
+    padding: 10px 0; }
+  .friendlist-main-wrapper .pagination-bar-container .page-detail {
+    padding: 10px;
+    width: 50px;
+    border: 1px solid #686868;
+    border-left: 0;
+    text-align: center; }
+  .friendlist-main-wrapper .pagination-bar-container .page-detail:first-child {
+    border-left: 1px solid #686868; }
+  .friendlist-main-wrapper .pagination-bar-container .page-detail:hover {
+    background: #9979A7;
+    color: #ffffff; }
+  .friendlist-main-wrapper .pagination-bar-container .page-detail-active {
+    background: #41045A;
+    color: #ffffff; }
+.friendlist-main-wrapper .friend-description {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 500px;
+  min-height: 150px;
+  height: auto;
+  padding: 20px;
+  background: #ffffff; }
+  .friendlist-main-wrapper .friend-description i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block; }
+  .friendlist-main-wrapper .friend-description div:last-child {
+    margin: 20px 0; }
+
+/*# sourceMappingURL=friendsList.css.map */

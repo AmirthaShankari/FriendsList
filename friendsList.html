@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Friends List</title>
+        <!-- BEGIN :: Include Stylesheet and Fonts -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "styles/css/friendsList.css">
+        <!-- END :: Include Stylesheet and Fonts-->
+    </head>
+    <body>
+        <!-- BEGIN :: Friendslist main wrapper -->
+        <div class = "friendlist-main-wrapper">
+            <!-- BEGIN :: Header Menu bar -->
+            <header>
+                <i class="fas fa-user-friends"></i>
+                Friends List
+            </header>
+            <!-- END :: Header Menu bar -->
+            <!-- BEGIN :: friends list container --> 
+            <div class = "friends-list-container">
+                <!-- BEGIN :: friends search sort container -->
+                <div class = "friends-search-sort-container">
+                    <!-- BEGIN :: Search form -->
+                    <div class = "search-container">
+                        <form autocomplete = "off" method = "POST" action = "#" id = "searchForm">
+                            <div class = "autocomplete">
+                                <input type = "text" name = "friends-search" id = "searchFriends" placeholder = "Search friends">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- END :: Search form -->
+                    <!-- BEGIN :: Sort button -->
+                    <div class = "sort-filter-container">
+                        <div class = "sort-container">
+                                Name : <i class="fas fa-sort-amount-up" id = "nameSort" sort = ""></i>
+                        </div>
+                        <div class = "filter-container">
+                            Show
+                            <select id = "favouritesFilter">
+                                <option value = "">All</option>
+                                <option value = "yes">Close Friends</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- END :: sort button -->
+                </div>
+                <!-- END :: friends search sort container -->
+                <!-- BEGIN :: Loader section -->
+                <div class = "loader-wrapper">
+                    <div class="loader">
+                    </div>
+                </div>
+                <!-- END :: Loader section -->
+                <!-- BEGIN :: Alphabetical Navigation -->
+                <div id = "alphabetical-search">
+                </div>
+                <!-- END :: Alphabetical Navigation -->
+                <!-- BEGIN :: friend list detail -->
+                <div class = "friend-list-detail">
+                </div>
+                <!-- END :: friend list detail -->
+                <div class = "pop-up-wrapper">
+                    <div class = "friend-description">
+                        <i class="fas fa-times"></i>
+                        <div class = "name">
+                        </div>
+                        <div class = "description">
+                        </div>
+                    </div>
+                </div>
+                <!-- BEGIN :: Pagination bar -->
+                <div class = "pagination-bar-container">
+                    <div class = "result-detail">
+                    </div>
+                    <div class = "pages">
+
+                    </div>
+                </div>
+                <!-- END :: Pagination bar -->
+            </div>
+            <!-- BEGIN :: friends list container --> 
+        </div>
+        <!-- END :: Friendslist main wrapper -->
+        <!-- BEGIN :: Including the necessary scripts -->
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src = "js/constants/friendListConstants.js"></script>
+        <script src = "js/utility/paginationUtility.js"></script>
+        <script src = "js/utility/consoleUtility.js"></script>
+        <script src = "js/friendsList.js"></script>
+        <!-- END :: Including the necessary scripts -->
+    </body>
+</html>
