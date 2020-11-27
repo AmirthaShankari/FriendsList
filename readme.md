@@ -1,6 +1,6 @@
 # FriendsList App
 
-Friends list app built with custom pagination, filter and search library build with vanilla JS
+Friends list app with custom pagination, filter and search library build with vanilla JS
 
 ### Built With
 
